@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+<audio controls loop muted id="audio"><source src="./assets/paletteTownTheme.mp3" type="audio/mpeg"></audio>
+<audio id="buttonSound" src="./assets/buttonSound.mp3" preload="auto"></audio>
+<div id="wrapper" style="font-family: classicPoke;">
+    <div class="header"><img src="./assets/pokédexLogo.png" height="150vh"></div>
+    <!-- <input type="button" class="idSearch"></div> -->
+    <div class="body">
+        <img src="./assets/pokedexPixelated.png">
+        <div class="picture"><img src="" width="170px" id="pictureId">
+            <section class="pokeAll" id="pokeAllId">
+                <p class="poke1" id="poke1Id">'0'</p>
+                <p class="poke2" id="poke2Id">'0'</p>
+                <p class="poke3" id="poke3Id">'0'</p>
+            </section>
+        </div>
+        <div class="genera" id="generaId">-</div>
+        <div class="type1" id="type1Id">-</div>
+        <div class="type2" id="type2Id">-</div>
+        <div class="height" id="heightId">                           press return to begin
+                            a new search</div>
+        <div class="weight" id="weightId"></div>
+        <div class="numberAndName" class="numberAndNameId" id="numberAndNameId">Enter valid Pokédex number</div>
+    </div>
+    <div class="buttons" id="buttonsId">
+        <button class="button1" id="button1Id" value="1" onclick="numberSelect()">1</button>
+        <button class="button2" id="button2Id" value="2" onclick="numberSelect()">2</button>
+        <button class="button3" id="button3Id" value="3" onclick="numberSelect()">3</button>
+        <button class="button4" id="button4Id" value="4" onclick="numberSelect()">4</button>
+        <button class="button5" id="button5Id" value="5" onclick="numberSelect()">5</button>
+        <button class="button6" id="button6Id" value="6" onclick="numberSelect()">6</button>
+        <button class="button7" id="button7Id" value="7" onclick="numberSelect()">7</button>
+        <button class="button8" id="button8Id" value="8" onclick="numberSelect()">8</button>
+        <button class="button9" id="button9Id" value="9" onclick="numberSelect()">9</button>
+        <button class="button0" id="button0Id" value="0" onclick="numberSelect()">0</button>
+        <button class="previousBtn" id="previousBtn" onclick="document.getElementById('buttonSound').play();"></button>
+        <button class="nextBtn" id="nextBtn" onclick="document.getElementById('buttonSound').play();"></button>
+        <input class="searchBtn" id="searchBtnId" type="button" onclick="reset()"></input>
+        <button class="mute" id="muteId" onclick="mute()"><img src="./assets/audioButton.png" width="35px" onclick="document.getElementById('buttonSound').play();"></button>
+    </div>
+    <!-- <input class="idSearch" type="number" max="898" min="1" maxlength="3"> -->
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
